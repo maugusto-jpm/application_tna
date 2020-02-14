@@ -1,52 +1,78 @@
-<h1 align="center">
-  <img alt="GoStack" src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/masterclass.png" width="120px" />
-</h1>
+# Avaliação TNA
 
-<h3 align="center">
-  SQL no Node.js com Sequelize
-</h3>
+Os exercícios individuais estã na pasta `individual_applications`
 
-<p align="center">Nesse vídeo abordo as comparações de SQL vs NoSQL, níveis de abstração de base de dados, migrations, configuração do Sequelize, relacionamentos 1:N, relacionamentos N:N, queries complexas e muito mais!</p>
+## servidor
 
+O servidor para os exercícios 1 e 3 é um servidor em [Node.Js](https://nodejs.org/en/).
 
-## 👨🏼‍💻 Instrutor
+# Dependências
 
-- [Diego Fernandes](https://github.com/diego3g)
+Para executar este servidor é necessário ter nstalados o [Node.Js](https://nodejs.org/en/) e o [Yarn](https://yarnpkg.com/)
 
-## 🚀 Tecnologias
+Para executar, basta seguir os passos a seguir:
 
-- ⚡ Express — A web framework for Node.js
-- 💾 Sequelize — SQL dialect ORM for Node.js
+- Executar o comando `yarn install` para instalar as dependências. no caso é o [Express](https://expressjs.com/pt-br) e suas dependências
+- Executar o comando `yarn start` para executar o servidor
+- Usar o [Postman](https://www.postman.com/) para fazer requisições HTTP
 
-## ✋🏻 Pré-requisitos
+### Rotas
 
-- [Node.js](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/pt-BR/docs/install)
+#### O percentual do votos válidos em relação ao total de eleitores
 
-## 🔥 Instalação e execução
+Caminho: /election-calculation/percentage-of-valid-vows
+Verbo: GET
+Corpo da requisição: Sem corpo
+Resposta (JSON):
 
-1. Faça um clone desse repositório;
-2. Entre na pasta `cd masterclass-nodejs-sql`;
-3. Rode `yarn` para instalar as dependências;
-4. Altere as credencias dentro de `/src/config/database.js`;
-5. Rode `yarn sequelize db:create` para criar o banco de dados;
-6. Rode `yarn sequelize db:migrate` para executar as migrations;
-7. Rode `yarn dev` para iniciar o servidor.
-8. Importe o arquivo `Insomnia_2019-10-16.json` desse repositório no Insomnia;
+```json
+{
+  "result": 10
+}
+```
 
-## ⚡️ Como contribuir
+#### O percentual de brancos em relação ao total de eleitores
 
-- Faça um fork desse repositório;
-- Cria uma branch com a sua feature: `git checkout -b minha-feature`;
-- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
-- Faça push para a sua branch: `git push origin minha-feature`.
+Caminho: /election-calculation/percentage-of-white-vows
+Verbo: GET
+Corpo da requisição: Sem corpo
+Resposta (JSON):
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+```json
+{
+  "result": 10
+}
+```
 
-## 📝 Licença
+#### O percentual de nulos em relação ao total de eleitores
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Caminho: /election-calculation/percentage-of-null-vows
+Verbo: GET
+Corpo da requisição: Sem corpo
+Resposta (JSON):
 
----
+```json
+{
+  "result": 10
+}
+```
 
-Feito com 💖 by Rocketseat 👋 [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+#### Fatorial de um número
+
+Caminho: /factorial
+Verbo: POST
+Corpo da requisição (JSON):
+
+```json
+{
+  "number": 10
+}
+```
+
+Resposta (JSON):
+
+```json
+{
+  "result": 10
+}
+```

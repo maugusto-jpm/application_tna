@@ -2,11 +2,11 @@
 
 Os exercícios individuais estã na pasta `individual_applications`
 
-## servidor
+## Servidor
 
 O servidor para os exercícios 1 e 3 é um servidor em [Node.Js](https://nodejs.org/en/).
 
-# Dependências
+## Dependências
 
 Para executar este servidor é necessário ter nstalados o [Node.Js](https://nodejs.org/en/) e o [Yarn](https://yarnpkg.com/)
 
